@@ -1,0 +1,11 @@
+{
+	"name": "typescript node",
+	"remoteUser": "node",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"forwardPorts": [6666],
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/dev/,type=bind",
+	"workspaceFolder": "/workspace/dev/",
+	"postCreateCommand": "npm i"
+}
